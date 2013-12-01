@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>LoginStartServletName</servlet-name>
+        <servlet-class>servlet.LoginStartServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoggedInServletName</servlet-name>
+        <servlet-class>servlet.LoggedInServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginStartServletName</servlet-name>
+        <url-pattern>/LoginStart</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoggedInServletName</servlet-name>
+        <url-pattern>/LoggedIn</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
