@@ -13,15 +13,14 @@ import java.util.List;
  *
  * @author Hamza
  */
-public class LessonOneWords extends Lesson {
-
-    public LessonOneWords() {
+public class LessonOneWords extends Lesson{
+    
+    @Override
+    public void intializeWords() {
         listOfWords.add(new Word("Car", "Auto", ""));
         listOfWords.add(new Word("Bottle", "Flasche", ""));
         listOfWords.add(new Word("Lamp", "Lampe", ""));
         listOfWords.add(new Word("Window", "Fenster", ""));
         listOfWords.add(new Word("Chair", "Sessel", ""));
-        
-        setListOfWords(listOfWords);
     }
 }

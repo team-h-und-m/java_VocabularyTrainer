@@ -17,12 +17,12 @@
         Session:  <%=session.getId()%>
         
         <h3>Lessons</h3>
-        <form action="lessonSelection" method="post">
+        <form action="LessonSelect" method="post">
             <input type="hidden" value="lesson1" name="lesson">
             <input type="submit" value="Lesson 1" name="lesson1submit"/>
         </form>
         
-        <form action="lessonSelection" method="post">
+        <form action="LessonSelect" method="post">
             <input type="hidden" value="lesson2" name="lesson">
             <input type="submit" value="Lesson 2" name="lesson2submit"/>
         </form>

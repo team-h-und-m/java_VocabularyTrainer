@@ -16,11 +16,13 @@ import java.util.List;
  */
 public abstract class Lesson {
     public List<Word> listOfWords = new ArrayList<>();
-
+    
+    public abstract void intializeWords();
+    
     public List<Word> getListOfWords() {
         return listOfWords;
     }
-
+    
     public void setListOfWords(List<Word> listOfWords) {
         this.listOfWords = listOfWords;
     }

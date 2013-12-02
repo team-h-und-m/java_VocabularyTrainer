@@ -31,6 +31,7 @@ public abstract class AbstractLessonServlet extends HttpServlet{
         
         List<Word> words = processRequest(req,resp);
         req.setAttribute("words", words);
+        req.setAttribute("lessonNumber", req.getParameter("lesson"));
         String url = "lessonView.jsp";
         forward("/WEB-INF/view/lesson/"+url,req,resp);
     }

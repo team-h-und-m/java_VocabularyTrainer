@@ -7,13 +7,11 @@ package servlet;
 
 import LektionDaten.Lesson;
 import LektionDaten.LessonOneWords;
+import LektionDaten.LessonStrategy;
 import LektionDaten.LessonTwoWords;
 import basis.AbstractLessonServlet;
 import data.Word;
-import java.io.IOException;
 import java.util.List;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -28,12 +26,14 @@ public class LessonServlet extends AbstractLessonServlet {
         String lessonNumber = req.getParameter("lesson");
         switch (lessonNumber) {
             case "lesson1": {
-                Lesson lesson = new LessonOneWords();
-                return lesson.getListOfWords();
+                LessonStrategy ls = new LessonStrategy();
+                ls.setStrategy(new LessonOneWords());
+                return ls.getLessonWordsFromLesson();
             }
             case "lesson2": {
-                Lesson lesson = new LessonTwoWords();
-                return lesson.getListOfWords();
+                LessonStrategy ls = new LessonStrategy();
+                ls.setStrategy(new LessonTwoWords());
+                return ls.getLessonWordsFromLesson();
             }
         }
         return null;

@@ -8,6 +8,14 @@
         <servlet-name>LoggedInServletName</servlet-name>
         <servlet-class>servlet.LoggedInServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LessonSelection</servlet-name>
+        <servlet-class>servlet.LessonServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LessonInput</servlet-name>
+        <servlet-class>servlet.LessonInputServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginStartServletName</servlet-name>
         <url-pattern>/LoginStart</url-pattern>
@@ -15,6 +23,14 @@
     <servlet-mapping>
         <servlet-name>LoggedInServletName</servlet-name>
         <url-pattern>/LoggedIn</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LessonSelection</servlet-name>
+        <url-pattern>/LessonSelect</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LessonInput</servlet-name>
+        <url-pattern>/LessonInput</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
